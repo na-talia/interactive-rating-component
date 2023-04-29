@@ -7,18 +7,10 @@ const submitButton = document.getElementById("submit-btn");
 ratingButtons.addEventListener("click", (e) => {
   let selectedNumber = e.target.innerText;
   selectedRating.innerText = selectedNumber;
-  console.log(selectedNumber);
+ 
   submitButton.addEventListener("click", () => {
     ratingPage.style.display = "none";
     //thankYouPage.className = ""; - removing all classes from the element
     thankYouPage.classList.remove("hidden"); //classList.remove() method removes an individual class/classes
   });
 });
-
-/* doesn`t work
-  ratingButtons.forEach((rating) => {
-    rating.addEventListener("click", () => {
-      selectedRating.innerText = rating.innerText;
-    }); 
-  });
-*/
